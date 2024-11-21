@@ -7,6 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Slider from "./slider";
 import Videos from "./videos";
 import Released from "./released";
+import Updates from "./updates";
 
 function App() {
   return (
@@ -111,6 +112,7 @@ function App() {
           {/* Videos Page */}
           <Route path="/videos" element={<Videos />} />
           <Route path="/released" element={<Released />} />
+          <Route path="/updates" element={<Updates />} />
 
         </Routes>
 
