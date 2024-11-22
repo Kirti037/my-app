@@ -29,28 +29,40 @@ const Navbar = () => {
           {/* Left Navigation Items */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
+              <Link className="nav-link active" aria-current="page" to="/videos">
+                Videos
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            <li
+              className="nav-item dropdown"
+              onMouseEnter={() =>
+                document.getElementById("dropdown-menu").classList.add("show")
+              }
+              onMouseLeave={() =>
+                document
+                  .getElementById("dropdown-menu")
+                  .classList.remove("show")
+              }
+            >
               <Link
                 className="nav-link dropdown-toggle"
                 to="#"
                 role="button"
-                data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 More
               </Link>
-              <ul className="dropdown-menu">
+              <ul
+                id="dropdown-menu"
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
                 <li>
                   <Link className="dropdown-item" to="/updates">
                     Upcoming
                   </Link>
                 </li>
                 <li>
-                  {/* Replace the <a> tag with a <Link> tag or remove this item if not needed */}
                   <Link className="dropdown-item" to="/released">
                     Released
                   </Link>

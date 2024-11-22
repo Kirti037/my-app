@@ -27,16 +27,14 @@ function App() {
                 <div className="text-center my-5">
                   <h1 className="display-4">WELCOME TO BGMI WORLD</h1>
                   <Slider />
-                  
                 </div>
                 <h3 className="text-center mb-4">
-                    Here you can find information, articles, images, related to BGMI.
-                  </h3>
+                  Here you can find information, articles, images, related to
+                  BGMI.
+                </h3>
 
                 {/* Content Section */}
                 <div className="content container my-5">
-                 
-
                   <div className="row">
                     {/* Card 1 */}
                     <div className="col-12 col-sm-6 col-md-4 mb-4">
@@ -110,18 +108,16 @@ function App() {
           />
 
           {/* Videos Page */}
-          <Route path="/videos" element={<Videos />} />
+          
           <Route path="/released" element={<Released />} />
           <Route path="/updates" element={<Updates />} />
-
+          <Route path="/videos" element={<Videos />} />
         </Routes>
 
         {/* Footer Section */}
         <footer className="App-footer text-center py-3">
           <p>&copy; BGMI WORLD. All rights reserved.</p>
-          <p>
-            &copy;About us &copy;Contact us
-          </p>
+          <p>&copy;About us &copy;Contact us</p>
         </footer>
       </div>
     </Router>

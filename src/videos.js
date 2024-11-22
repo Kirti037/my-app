@@ -1,75 +1,85 @@
 import React from "react";
-import "./videos.css";
+import "./videos.css"; // For styling
 
 const videos = [
   {
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    type: "video/mp4",
-    title: "Big Buck Bunny",
-    description: "A short animation featuring a big bunny and his adventures.",
+    id: 1,
+    title: "BGMI Montage 1",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video1",
   },
   {
-    src: "https://www.w3schools.com/html/movie.mp4",
-    type: "video/mp4",
-    title: "The Bear Movie",
-    description: "A heartwarming tale of a bear in the wild.",
+    id: 2,
+    title: "BGMI Highlights",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video2",
   },
   {
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    type: "video/mp4",
-    title: "Another Bunny Tale",
-    description: "A sequel to the Big Buck Bunny animation.",
+    id: 3,
+    title: "Epic BGMI Gameplay",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video3",
   },
   {
-    src: "https://www.w3schools.com/html/movie.mp4",
-    type: "video/mp4",
-    title: "Wildlife Adventure",
-    description: "Explore the beauty of nature and wildlife.",
+    id: 4,
+    title: "BGMI Pro Plays",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video4",
   },
   {
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    type: "video/mp4",
-    title: "Funny Bunny",
-    description: "Enjoy the humorous antics of a funny bunny.",
+    id: 5,
+    title: "BGMI Top 10 Moments",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video5",
   },
   {
-    src: "https://www.w3schools.com/html/movie.mp4",
-    type: "video/mp4",
-    title: "Forest Scenes",
-    description: "A peaceful journey through a beautiful forest.",
+    id: 6,
+    title: "BGMI Tactics & Tips",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video6",
+  },
+  {
+    id: 7,
+    title: "BGMI Extreme Battles",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video7",
+  },
+  {
+    id: 8,
+    title: "BGMI Esports Highlights",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video8",
+  },
+  {
+    id: 9,
+    title: "Clutch Moments in BGMI",
+    thumbnail: "https://via.placeholder.com/300x200",
+    videoUrl: "https://www.example.com/video9",
   },
 ];
 
 const VideoPage = () => {
   return (
     <div className="container">
-      <header className="header">
-        <h1>Welcome to the Video Gallery</h1>
-        <p>
-          Explore our collection of amazing videos featuring nature, wildlife,
-          and animations.
-        </p>
-      </header>
-
-      <main>
-        <h2>Featured Videos</h2>
-        <div className="video-gallery">
-          {videos.map((video, index) => (
-            <div key={index} className="video-wrapper">
-              <video controls>
-                <source src={video.src} type={video.type} />
-                Your browser does not support the video tag.
-              </video>
-              <div className="video-details">
-                <h3>{video.title}</h3>
-                <p>{video.description}</p>
-              </div>
+      <div className="video-page">
+        <header className="video-header">
+          <h1>BGMI Video Highlights</h1>
+        </header>
+        <main className="video-grid">
+          {videos.map((video) => (
+            <div key={video.id} className="video-card">
+              <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={video.thumbnail}
+                  alt={`${video.title} Thumbnail`}
+                  className="video-thumbnail"
+                />
+                <h2 className="video-title">{video.title}</h2>
+              </a>
             </div>
           ))}
-        </div>
-      </main>
-
-
+        </main>
+      </div>
     </div>
   );
 };
