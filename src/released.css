@@ -108,4 +108,17 @@
       height: auto;
     }
   }
+  .update-link {
+    text-decoration: none;
+    color: inherit; /* This ensures the link text inherits the default color */
+  }
+  
+  .update-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .update-item:hover {
+    transform: scale(1.05);
+  }
   
